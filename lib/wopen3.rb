@@ -1,4 +1,4 @@
-# Copyright 2007 Wincent Colaiuta
+# Copyright 2007-2008 Wincent Colaiuta
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -20,7 +20,7 @@
 # Usage example:
 #
 #   result, errors = '', ''
-#   Wopen3.popen3('svn', 'log') do |stdin, stdout, stderr|
+#   Wopen3.popen3('git', 'log') do |stdin, stdout, stderr|
 #     threads = []
 #     threads << Thread.new(stdout) do |out|
 #       out.each { |line| result << line }
