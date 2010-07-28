@@ -30,7 +30,7 @@ end
 
 SPEC = Gem::Specification.new do |s|
   s.name          = 'wopen3'
-  s.version       = '0.1'
+  s.version       = '0.2'
   s.author        = 'Wincent Colaiuta'
   s.email         = 'win@wincent.com'
   s.homepage      = 'http://wincent.com/a/products/walrus/wopen3/'
