@@ -3,6 +3,7 @@ require 'rake/gempackagetask'
 require 'rubygems'
 require 'spec/rake/spectask'
 require 'spec/rake/verify_rcov'
+require File.expand_path('lib/wopen3/version.rb', File.dirname(__FILE__))
 
 desc 'Run specs with coverage'
 Spec::Rake::SpecTask.new('coverage') do |t|
@@ -28,25 +29,12 @@ Spec::Rake::SpecTask.new('specdoc') do |t|
   t.out         = 'specdoc.rd'
 end
 
-SPEC = Gem::Specification.new do |s|
-  s.name              = 'wopen3'
-  s.version           = '0.2'
-  s.author            = 'Wincent Colaiuta'
-  s.email             = 'win@wincent.com'
-  s.homepage          = 'https://wincent.com/products/wopen3'
-  s.platform          = Gem::Platform::RUBY
-  s.summary           = 'Wopen3 is a simple replacement for Open3'
-  s.description       = <<-ENDDESC
-    Unlike Open3, Wopen3 does not throw away the exit code of the executed
-    (grandchild) process. Only a child process is spawned and the exit
-    status is returned in $? as normal.
-  ENDDESC
-  s.require_paths     = ['lib']
-  s.rubyforge_project = 'walrus'
-  s.has_rdoc          = false
-  s.files             = FileList['{lib,spec}/**/*'].to_a
+desc 'Build gem ("gem build")'
+task :build do
+  system 'gem build wopen3.gemspec'
 end
 
-Rake::GemPackageTask.new(SPEC) do |t|
-  t.need_tar      = true
+desc 'Publish gem ("gem push")'
+task :push => :build do
+  system "gem push pkg/#{Wopen3::VERSION}.gem"
 end
