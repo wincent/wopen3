@@ -35,10 +35,10 @@ SPEC = Gem::Specification.new do |s|
   s.email         = 'win@wincent.com'
   s.homepage      = 'http://wincent.com/a/products/walrus/wopen3/'
   s.platform      = Gem::Platform::RUBY
-  s.summary       = 'Wopen3 is a simple replacement for Open3.'
+  s.summary       = 'Wopen3 is a simple replacement for Open3'
   s.description   = <<-ENDDESC
     Unlike Open3, Wopen3 does not throw away the exit code of the executed
-    (grandchild) process. Only a child process is spawned and the exit 
+    (grandchild) process. Only a child process is spawned and the exit
     status is returned in $? as normal.
   ENDDESC
   s.require_paths = ['lib']
