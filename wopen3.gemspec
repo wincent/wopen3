@@ -17,4 +17,5 @@ Gem::Specification.new do |s|
   s.rubyforge_project = 'walrus'
   s.has_rdoc          = false
   s.files             = Dir['{lib,spec}/**/*']
+  s.add_development_dependency 'rspec', '>= 2.0.0.beta'
 end
