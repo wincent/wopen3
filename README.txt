@@ -17,3 +17,11 @@ Usage example:
   end
   status = $?.exitstatus
   raise "Non-zero exit status #{status}" if status != 0
+
+As this is such a common usage pattern, a 'system' method is provided as a
+convenience:
+
+  result = Wopen3.system('git', 'log')
+  result.status # => 0
+  result.stderr # => ''
+  result.stdout # => 'commit 491411b3...'

@@ -17,3 +17,11 @@ spawned and the exit status is returned in $? as normal.</p>
   end
   status = $?.exitstatus
   raise "Non-zero exit status #{status}" if status != 0</pre>
+
+<p>As this is such a common usage pattern, a 'system' method is provided as a
+convenience:</p>
+
+<pre>result = Wopen3.system('git', 'log')
+result.status # =&gt; 0
+result.stderr # =&gt; ''
+result.stdout # =&gt; 'commit 491411b3...'</pre>
