@@ -1,6 +1,5 @@
-require 'rake'
-require 'rake/gempackagetask'
 require 'rubygems'
+require 'rake'
 require 'spec/rake/spectask'
 require 'spec/rake/verify_rcov'
 require File.expand_path('lib/wopen3/version.rb', File.dirname(__FILE__))
@@ -36,5 +35,5 @@ end
 
 desc 'Publish gem ("gem push")'
 task :push => :build do
-  system "gem push pkg/#{Wopen3::VERSION}.gem"
+  system "gem push #{Wopen3::VERSION}.gem"
 end
