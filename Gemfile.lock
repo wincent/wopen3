@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wopen3 (0.2.0.99)
+    wopen3 (0.3.0.99)
 
 GEM
   remote: http://rubygems.org/
