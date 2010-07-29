@@ -35,5 +35,5 @@ end
 
 desc 'Publish gem ("gem push")'
 task :push => :build do
-  system "gem push #{Wopen3::VERSION}.gem"
+  system "gem push wopen3-#{Wopen3::VERSION}.gem"
 end
