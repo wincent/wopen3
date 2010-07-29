@@ -18,6 +18,10 @@ describe Wopen3 do
       it 'captures the exit status' do
         @result.status.should == 0
       end
+
+      it 'reports success' do
+        @result.should be_success
+      end
     end
 
     context 'failure' do
@@ -35,6 +39,10 @@ describe Wopen3 do
 
       it 'captures the exit status' do
         @result.status.should == 64
+      end
+
+      it 'reports failure' do
+        @result.should_not be_success
       end
     end
 

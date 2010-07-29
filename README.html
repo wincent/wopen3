@@ -22,6 +22,7 @@ raise "Non-zero exit status #{status}" if status != 0</pre>
 convenience:</p>
 
 <pre>result = Wopen3.system('git', 'log')
-result.status # =&gt; 0
-result.stderr # =&gt; ''
-result.stdout # =&gt; 'commit 491411b3...'</pre>
+result.success? # =&gt; true
+result.status   # =&gt; 0
+result.stderr   # =&gt; ''
+result.stdout   # =&gt; 'commit 491411b3...'</pre>

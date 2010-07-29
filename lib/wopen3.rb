@@ -101,6 +101,10 @@ module Wopen3
       end
       @status = $?.exitstatus
     end
+
+    def success?
+      @status == 0
+    end
   end # class Result
 
   def self.popen3 *cmd, &block

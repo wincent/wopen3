@@ -22,6 +22,7 @@ As this is such a common usage pattern, a 'system' method is provided as a
 convenience:
 
   result = Wopen3.system('git', 'log')
-  result.status # => 0
-  result.stderr # => ''
-  result.stdout # => 'commit 491411b3...'
+  result.success? # => true
+  result.status   # => 0
+  result.stderr   # => ''
+  result.stdout   # => 'commit 491411b3...'
