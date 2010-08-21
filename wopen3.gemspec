@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
   s.has_rdoc          = false
   s.files             = Dir['{lib,spec}/**/*']
   s.add_development_dependency 'rspec', '>= 2.0.0.beta'
+  s.add_development_dependency 'yard'
 end
