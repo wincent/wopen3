@@ -1,3 +1,5 @@
 pkg
 *.gem
 .config.yml
+.yardoc
+html
